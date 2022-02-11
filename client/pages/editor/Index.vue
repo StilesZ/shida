@@ -18,7 +18,7 @@
       <templateLibs v-if="activeSideBar === 'templateLibs'" />
     </div>
 
-    <!--页面编辑区域-->
+    <!--页面控件编辑区域-->
     <div class="editor-main" @contextmenu="onContextmenu">
       <div class="control-bar-wrapper">
         <controlBar
@@ -41,6 +41,9 @@
         <el-tab-pane label="动画" name="动画">
           <animationEdit></animationEdit>
         </el-tab-pane>
+		<el-tab-pane label="事件" name="事件">
+		  <eventEdit></eventEdit>
+		</el-tab-pane>
         <el-tab-pane label="页面设置" name="页面属性">
           <pageAttrEdit></pageAttrEdit>
         </el-tab-pane>
@@ -58,18 +61,18 @@
 </template>
 
 <script>
-import componentLibs from "./components/component-libs/Index";
-import pageManage from "./components/page-manage";
-import templateLibs from "./components/template-libs";
-import editorPan from "./components/editor-panel/Index";
-import attrEdit from "./components/attr-configure/attr-edit";
-import animationEdit from "./components/attr-configure/animation-edit";
-import eventEdit from "./components/attr-configure/event-edit";
-import pageAttrEdit from "./components/attr-configure/page-attr-edit";
-import scriptEdit from "./components/attr-configure/script-edit";
-import controlBar from "./components/control-bar";
+import componentLibs from "./components/component-libs/Index"; // 组件库
+import pageManage from "./components/page-manage"; // 页面管理
+import templateLibs from "./components/template-libs"; //模板库
+import editorPan from "./components/editor-panel/Index"; // 页面编辑组件
+import attrEdit from "./components/attr-configure/attr-edit"; //属性
+import animationEdit from "./components/attr-configure/animation-edit"; //动画
+import eventEdit from "./components/attr-configure/event-edit"; // 事件
+import pageAttrEdit from "./components/attr-configure/page-attr-edit"; // 页面设置
+import scriptEdit from "./components/attr-configure/script-edit"; // 脚本编辑
+import controlBar from "./components/control-bar"; // 导航栏
 
-import makingPanel from "./components/making-panel";
+import makingPanel from "./components/making-panel"; // 
 import $bus from "@client/eventBus";
 
 import { mapState } from "vuex";

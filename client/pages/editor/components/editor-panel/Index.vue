@@ -45,6 +45,7 @@
         <div class="page-wrapper-mask"></div>
       </div>
 
+	<!--  -->
       <div
         class="page-wrapper-menu-operation menu-item-on-edit-panel"
         :style="getMenuOptionsPositionStyle"
@@ -67,9 +68,9 @@
 </template>
 
 <script>
-import { _qk_register_components_object } from "@client/plugins/index";
+import { _qk_register_components_object } from "@client/plugins/index"; // 加载动态组件 <component/>
 import editorProjectConfig from "@client/pages/editor/DataModel";
-import editShape from "@/components/edit-shape";
+import editShape from "@/components/edit-shape"; // 页面组件元素
 import { mapState, mapGetters } from "vuex";
 import html3canvas from "html3canvas";
 

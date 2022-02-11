@@ -9,6 +9,7 @@ import QS from "qs";
 if (process.env.NODE_ENV !== "development") {
   axios.defaults.baseURL = $config.baseURL;
 }
+// axios.defaults.baseURL = $config.baseURL;
 axios.defaults.headers["Content-Type"] = "application/json;charse=UTF-8";
 axios.defaults.timeout = 30000; // 超时时间
 
